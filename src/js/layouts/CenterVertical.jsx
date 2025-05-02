@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
 
-const CenterVertical = (props) => {
+const CenterVertical = () => {
   return (
-    <>
-      <div
-        className={
-          "absolute flex flex-col inset-0 mx-auto my-0 text-center justify-center items-center overflow-y-auto " +
-          props.className
-        }
-      >
-        {props.children}
-      </div>
-    </>
+    <div
+      className={
+        "bg-[#bd7f7f] flex flex-col justify-center items-center h-screen"
+      }
+    >
+      <div className={" flex flex-col"}>Ih Perdi</div>
+      <div className={" flex flex-col"}>introducao</div>
+      <div className={" flex flex-col"}>search</div>
+      <div className={" flex flex-col"}>tabela</div>
+    </div>
   );
 };
 
