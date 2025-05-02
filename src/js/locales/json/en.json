@@ -1,0 +1,34 @@
+{
+    "english": "English",
+    "malay": "Malay",
+    "logo": {
+        "react": "React Logo",
+        "vite": "Vite Logo"
+    },
+    "icon": {
+        "error": "Error Icon"
+    },
+    "first": {
+        "header": "First Page of React Boilerplate",
+        "title": "React Boilerplate",
+        "description": "ReactJS + Vite + Tailwind CSS + Storybook",
+        "instruction": "Click on the React and Vite logo to learn more"
+    },
+    "second": {
+        "header": "Second Page of React Boilerplate",
+        "title": "Vite + React Boilerplate",
+        "description": "Vite + ReactJS + Tailwind CSS + Storybook",
+        "instruction": "Click on the Vite and React logo to learn more"
+    },
+    "error": {
+        "header": "Error Page of React Boilerplate",
+        "title": "Error",
+        "description": "This is not a valid URL",
+        "instruction": "Error Log"
+    },
+    "button": {
+        "count": "Count",
+        "back": "Back to Home"
+    },
+    "placeholder": "Placeholder"
+}
