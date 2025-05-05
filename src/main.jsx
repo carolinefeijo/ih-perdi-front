@@ -4,11 +4,23 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./css/index.css";
 import Home from "./pages/Home/index.jsx";
+import Layout from "./components/Layout/index.jsx";
+import Table from "./components/table/index.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/tabela",
+        element: <Table />,
+      },
+    ],
   },
 ]);
 
