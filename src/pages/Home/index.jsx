@@ -4,9 +4,6 @@ import NewProduct from "./components/Modals/NewProduct";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState("");
 
   const onCloseModal = () => setIsModalOpen(false);
 
