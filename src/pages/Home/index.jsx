@@ -1,9 +1,14 @@
 import { useState } from "react";
 import Table from "../../components/table";
-import Modal from "../../components/Modal";
+import NewProduct from "./components/Modals/NewProduct";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
+
+  const onCloseModal = () => setIsModalOpen(false);
 
   return (
     <div className="bg-white flex flex-col mt-4 mx-2 rounded-md shadow">
@@ -24,7 +29,7 @@ export default function Home() {
           </span>
           <input
             type="text"
-            placeholder="Buscar..."
+            placeholder="O que você procura ?"
             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#F27272]"
           />
         </div>
@@ -38,10 +43,7 @@ export default function Home() {
       </div>
 
       <Table />
-
-      {isModalOpen && (
-        <Modal setIsModalOpen={setIsModalOpen} title="Novo produto" />
-      )}
+      <NewProduct isOpen={isModalOpen} onCloseModal={onCloseModal} />
     </div>
   );
 }
