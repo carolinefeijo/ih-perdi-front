@@ -1,6 +1,10 @@
+import { useState } from "react";
 import Table from "../../components/table";
+import Modal from "../../components/Modal";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="bg-white flex flex-col mt-4 mx-2 rounded-md shadow">
       <div className="mb-2">
@@ -12,9 +16,8 @@ export default function Home() {
           eficiente, mantendo sua loja sempre organizada e no controle.
         </p>
       </div>
-      {/* //imput de busca */}
+
       <div className="flex items-center gap-3 mx-7 mt-4">
-        {/* Campo de busca com ícone */}
         <div className="relative w-full max-w-md">
           <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
             🔍
@@ -26,13 +29,19 @@ export default function Home() {
           />
         </div>
 
-        {/* // novo item */}
-        <button className="bg-[#F27272] text-white px-4 py-2 rounded-lg hover:bg-[#e05d5d] transition">
+        <button
+          className="bg-[#F27272] text-white px-4 py-2 rounded-lg hover:bg-[#e05d5d] transition"
+          onClick={() => setIsModalOpen(true)}
+        >
           Novo item
         </button>
       </div>
 
       <Table />
+
+      {isModalOpen && (
+        <Modal setIsModalOpen={setIsModalOpen} title="Novo produto" />
+      )}
     </div>
   );
 }
